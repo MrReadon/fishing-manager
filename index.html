@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T&L Fishing Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-label="Throne and Liberty fishing manager">
+        <div class="hero__shade"></div>
+        <div class="hero__content">
+          <div>
+            <p class="eyebrow">Throne and Liberty</p>
+            <h1 data-i18n="title">Менеджер рыбалки</h1>
+            <p class="subtitle" data-i18n="subtitle">
+              Выбери рыбу или локацию, чтобы быстро увидеть места ловли и тип воды.
+            </p>
+          </div>
+          <div class="language-switch" aria-label="Language">
+            <button class="lang-button is-active" data-lang="ru" type="button">RU</button>
+            <button class="lang-button" data-lang="en" type="button">EN</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="Search controls">
+        <div class="segmented" role="tablist" aria-label="Search mode">
+          <button class="segment is-active" data-mode="fish" type="button" role="tab" aria-selected="true">
+            <span data-i18n="modeFish">Рыба</span>
+          </button>
+          <button class="segment" data-mode="location" type="button" role="tab" aria-selected="false">
+            <span data-i18n="modeLocation">Локация</span>
+          </button>
+        </div>
+
+        <label class="field">
+          <span data-i18n="searchLabel">Поиск</span>
+          <input id="searchInput" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" />
+        </label>
+
+        <label class="field field--compact">
+          <span data-i18n="waterLabel">Тип воды</span>
+          <select id="waterFilter">
+            <option value="all" data-i18n="waterAll">Любой</option>
+            <option value="Freshwater" data-i18n="freshwater">Пресная</option>
+            <option value="Saltwater" data-i18n="saltwater">Соленая</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="content-grid">
+        <aside class="list-panel" aria-label="Results">
+          <div class="panel-heading">
+            <h2 id="listTitle">Рыбы</h2>
+            <span id="countBadge" class="count-badge">0</span>
+          </div>
+          <div id="resultList" class="result-list"></div>
+        </aside>
+
+        <section class="detail-panel" aria-live="polite">
+          <div id="detailView" class="detail-view"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
