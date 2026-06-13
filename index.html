@@ -25,7 +25,13 @@
         </div>
       </section>
 
-      <section class="toolbar" aria-label="Search controls">
+      <nav class="top-nav" aria-label="Application pages">
+        <button class="nav-button is-active" data-view="manager" type="button" data-i18n="navManager">Менеджер</button>
+        <button class="nav-button" data-view="info" type="button" data-i18n="navInfo">Инфо</button>
+        <button class="nav-button" data-view="about" type="button" data-i18n="navAbout">About</button>
+      </nav>
+
+      <section class="toolbar" data-view-section="manager" aria-label="Search controls">
         <div class="segmented" role="tablist" aria-label="Search mode">
           <button class="segment is-active" data-mode="fish" type="button" role="tab" aria-selected="true">
             <span data-i18n="modeFish">Рыба</span>
@@ -48,9 +54,18 @@
             <option value="Saltwater" data-i18n="saltwater">Соленая</option>
           </select>
         </label>
+
+        <label class="field field--compact">
+          <span data-i18n="statusLabel">Статус</span>
+          <select id="statusFilter">
+            <option value="all" data-i18n="statusAll">Все</option>
+            <option value="open" data-i18n="statusOpen">Не completed</option>
+            <option value="completed" data-i18n="statusCompleted">Completed</option>
+          </select>
+        </label>
       </section>
 
-      <section class="content-grid">
+      <section class="content-grid" data-view-section="manager">
         <aside class="list-panel" aria-label="Results">
           <div class="panel-heading">
             <h2 id="listTitle">Рыбы</h2>
@@ -63,6 +78,10 @@
           <div id="detailView" class="detail-view"></div>
         </section>
       </section>
+
+      <section id="infoView" class="page-panel" data-view-section="info" hidden></section>
+
+      <section id="aboutView" class="page-panel" data-view-section="about" hidden></section>
     </main>
 
     <script src="data.js"></script>

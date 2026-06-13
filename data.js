@@ -1,12 +1,191 @@
 window.FISHING_DATA = {
   "source": "T&L Fishing Mastersheet.xlsx",
   "generatedFromRows": 1003,
+  "info": {
+    "tips": [
+      {
+        "en": "You can speed up your fishing by utilising an animation cancel, when you have caught your fish press \"ctrl+f\" twice, this will put your rod away and redraw it skipping the \"hold fish animation\"",
+        "ru": "Можно ускорить рыбалку отменой анимации: когда рыба поймана, нажми \"Ctrl+F\" дважды, чтобы убрать и снова достать удочку, пропустив анимацию удержания рыбы."
+      },
+      {
+        "en": "Your Fishing Level is based off of level + rod boost.\ne.g. with level 8 fishing and a +4 fishing rod it will display as level 12.",
+        "ru": "Уровень рыбалки считается как уровень персонажа плюс бонус удочки. Например: уровень рыбалки 8 и удочка +4 покажут уровень 12."
+      },
+      {
+        "en": "Using Paste bait increases chances of small + big pouches when fishing (rewards natures jade)",
+        "ru": "Paste Bait повышает шанс получить малые и большие мешочки при рыбалке, из которых можно получить Nature's Jade."
+      },
+      {
+        "en": "Fishing hotspots spawn every 3 hours, the time varies per server/region",
+        "ru": "Рыболовные hotspots появляются каждые 3 часа, время зависит от сервера и региона."
+      },
+      {
+        "en": "Settings - Content - \"Fix Camera while Fishing\" (personal preference) - i prefer it off",
+        "ru": "Настройка Content -> \"Fix Camera while Fishing\" зависит от предпочтений; в источнике советуют выключать."
+      },
+      {
+        "en": "Sort your fishing log by \"Lv.\" and begin working down the list",
+        "ru": "Отсортируй журнал рыбалки по \"Lv.\" и проходи список сверху вниз."
+      },
+      {
+        "en": "Your chance to fail whilst fishing significantly decreses as you level up",
+        "ru": "Шанс неудачи при рыбалке заметно снижается с ростом уровня."
+      },
+      {
+        "en": "Your best bet when aiming to level up your fishing is to get a bamboo rod and start \ncompleting the fishing log and catching everything you can at your level whilst moving\nspots. Whilst doing this you should send amitoi expeditions in Talandre if 20+\n(if not do Daybreak Shore) and always use your mystic keys in Talandre.",
+        "ru": "Для прокачки лучше взять Bamboo Rod, закрывать журнал рыбалки и ловить всё доступное на твоём уровне, переходя между местами. Параллельно отправляй Amitoi экспедиции в Talandre, если уровень 20+, иначе в Daybreak Shore, и используй Mystic Keys в Talandre."
+      }
+    ],
+    "baits": [
+      {
+        "name": {
+          "en": "Paste Bait",
+          "ru": "Пастообразная наживка"
+        },
+        "source": {
+          "en": "Fishing Bait Chest - Contract Coin Merchant- 20 coins for 50 bait, daily",
+          "ru": "Fishing Bait Chest у Contract Coin Merchant: 20 монет за 50 наживки, ежедневно."
+        }
+      },
+      {
+        "name": {
+          "en": "Worm Bait",
+          "ru": "Черви"
+        },
+        "source": {
+          "en": "Cutting Tree's",
+          "ru": "Рубка деревьев."
+        }
+      },
+      {
+        "name": {
+          "en": "Shrimp Bait",
+          "ru": "Креветочная наживка"
+        },
+        "source": {
+          "en": "Chestacean, Hermit Crab, Hermit Lobster, Iron Chestacean, Large Stone Crab",
+          "ru": "Chestacean, Hermit Crab, Hermit Lobster, Iron Chestacean, Large Stone Crab."
+        }
+      },
+      {
+        "name": {
+          "en": "Fish Fillet Bait",
+          "ru": "Рыбное филе"
+        },
+        "source": {
+          "en": "Dissolving Fish",
+          "ru": "Разбор рыбы."
+        }
+      }
+    ],
+    "rods": [
+      {
+        "name": {
+          "en": "Bamboo",
+          "ru": "Бамбуковая"
+        },
+        "source": {
+          "en": "Quest - Adventures of the Expedition",
+          "ru": "Квест Adventures of the Expedition."
+        },
+        "boost": 0
+      },
+      {
+        "name": {
+          "en": "Steel",
+          "ru": "Стальная"
+        },
+        "source": {
+          "en": "Crafting - 10 Nature's Jade",
+          "ru": "Крафт: 10 Nature's Jade."
+        },
+        "boost": 1
+      },
+      {
+        "name": {
+          "en": "Monster Bone",
+          "ru": "Из кости монстра"
+        },
+        "source": {
+          "en": "Crafting - 30 Nature's Jade",
+          "ru": "Крафт: 30 Nature's Jade."
+        },
+        "boost": 2
+      },
+      {
+        "name": {
+          "en": "Platinum",
+          "ru": "Платиновая"
+        },
+        "source": {
+          "en": "Mystic Portals - Laslan/Stoneguard",
+          "ru": "Mystic Portals: Laslan / Stoneguard."
+        },
+        "boost": 3
+      },
+      {
+        "name": {
+          "en": "Kraken",
+          "ru": "Кракен"
+        },
+        "source": {
+          "en": "Amitoi Expedition - Daybreak Shore",
+          "ru": "Amitoi Expedition: Daybreak Shore."
+        },
+        "boost": 3
+      },
+      {
+        "name": {
+          "en": "Tevent",
+          "ru": "Тевент"
+        },
+        "source": {
+          "en": "Tevent Reward Chest / Crafting: 1 Tevent Soul + 100 Nature's Jade",
+          "ru": "Tevent Reward Chest или крафт: 1 Tevent Soul + 100 Nature's Jade."
+        },
+        "boost": 3
+      },
+      {
+        "name": {
+          "en": "Obsidian",
+          "ru": "Обсидиановая"
+        },
+        "source": {
+          "en": "Crafting: 1 Monster Bone Rod + 60 Nature's Jade + 30 Obsidian Piece",
+          "ru": "Крафт: 1 Monster Bone Rod + 60 Nature's Jade + 30 Obsidian Piece."
+        },
+        "boost": 3
+      },
+      {
+        "name": {
+          "en": "Luminous Dreamcatcher",
+          "ru": "Светящийся ловец снов"
+        },
+        "source": {
+          "en": "Crafting: 15 Dream Jade",
+          "ru": "Крафт: 15 Dream Jade."
+        },
+        "boost": 4
+      },
+      {
+        "name": {
+          "en": "Whisperion Fishing Rod",
+          "ru": "Удочка Whisperion"
+        },
+        "source": {
+          "en": "Amitoi Expedition - Talandre | Mystic Portal/Globes - Talandre",
+          "ru": "Amitoi Expedition - Talandre | Mystic Portal/Globes - Talandre"
+        },
+        "boost": 4
+      }
+    ]
+  },
   "fish": [
     {
       "id": "fish-1",
       "name": {
         "en": "Belphoret Bass",
-        "ru": "Бас Белфорет"
+        "ru": "Бельфоретский окунь"
       },
       "level": 1,
       "waterType": {
@@ -14,6 +193,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/belphoret-bass.png",
+      "note": null,
       "locations": [
         {
           "en": "Freshwater",
@@ -25,7 +205,7 @@ window.FISHING_DATA = {
       "id": "fish-2",
       "name": {
         "en": "Silver Anchovy",
-        "ru": "Серебряный анчоус"
+        "ru": "Серебристый анчоус"
       },
       "level": 1,
       "waterType": {
@@ -33,6 +213,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/silver-anchovy.png",
+      "note": null,
       "locations": [
         {
           "en": "Saltwater",
@@ -52,6 +233,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/largemouth-bass.png",
+      "note": null,
       "locations": [
         {
           "en": "Kastleton",
@@ -83,7 +265,7 @@ window.FISHING_DATA = {
       "id": "fish-4",
       "name": {
         "en": "Pink Cod",
-        "ru": "Розовая треска"
+        "ru": "Жёлтая треска"
       },
       "level": 3,
       "waterType": {
@@ -91,6 +273,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/pink-cod.png",
+      "note": null,
       "locations": [
         {
           "en": "Kastleton",
@@ -122,6 +305,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/banded-butterflyfish.png",
+      "note": null,
       "locations": [
         {
           "en": "Kastleton",
@@ -149,7 +333,7 @@ window.FISHING_DATA = {
       "id": "fish-6",
       "name": {
         "en": "Arowana",
-        "ru": "Арована"
+        "ru": "Аравана"
       },
       "level": 5,
       "waterType": {
@@ -157,6 +341,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/arowana.png",
+      "note": null,
       "locations": [
         {
           "en": "Vienta Village",
@@ -180,7 +365,7 @@ window.FISHING_DATA = {
       "id": "fish-7",
       "name": {
         "en": "Taion Moray Eel",
-        "ru": "Мурена Тайон"
+        "ru": "Тайонская мурена"
       },
       "level": 7,
       "waterType": {
@@ -188,6 +373,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/taion-moray-eel.png",
+      "note": null,
       "locations": [
         {
           "en": "Kastleton",
@@ -215,7 +401,7 @@ window.FISHING_DATA = {
       "id": "fish-8",
       "name": {
         "en": "Fonsine Barracuda",
-        "ru": "Барракуда Фонсин"
+        "ru": "Фонсинелова щука"
       },
       "level": 7,
       "waterType": {
@@ -223,6 +409,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/fonsine-barracuda.png",
+      "note": null,
       "locations": [
         {
           "en": "Vienta Village",
@@ -250,7 +437,7 @@ window.FISHING_DATA = {
       "id": "fish-9",
       "name": {
         "en": "Ballan Wrasse",
-        "ru": "Губан Баллан"
+        "ru": "Балланский губан"
       },
       "level": 9,
       "waterType": {
@@ -258,6 +445,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/ballan-wrasse.png",
+      "note": null,
       "locations": [
         {
           "en": "Kastleton",
@@ -285,7 +473,7 @@ window.FISHING_DATA = {
       "id": "fish-10",
       "name": {
         "en": "Dolly Varden Trout",
-        "ru": "Голец Долли Варден"
+        "ru": "Долливарнская форель"
       },
       "level": 9,
       "waterType": {
@@ -293,6 +481,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/dolly-varden-trout.png",
+      "note": null,
       "locations": [
         {
           "en": "Syleus's Abyss Entrance",
@@ -328,13 +517,17 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": null,
+      "note": {
+        "en": "They have been present in the Summer 2025 event.\nMay appear again in future events.",
+        "ru": "Были доступны в летнем событии 2025 года. Могут появиться снова в будущих событиях."
+      },
       "locations": []
     },
     {
       "id": "fish-12",
       "name": {
         "en": "Lava Starfish",
-        "ru": "Лавовая морская звезда"
+        "ru": "Лавовая звезда"
       },
       "level": 10,
       "waterType": {
@@ -342,6 +535,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/lava-starfish.png",
+      "note": {
+        "en": "Famous Fishing Spot required",
+        "ru": "Требуется знаменитое место рыбалки."
+      },
       "locations": [
         {
           "en": "Syleus's Abyss 5F",
@@ -357,7 +554,7 @@ window.FISHING_DATA = {
       "id": "fish-13",
       "name": {
         "en": "Leaf Sea Horse",
-        "ru": "Листовой морской конек"
+        "ru": "Листовой морской конёк"
       },
       "level": 11,
       "waterType": {
@@ -365,6 +562,10 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/leaf-sea-horse.png",
+      "note": {
+        "en": "Famous Fishing Spot required",
+        "ru": "Требуется знаменитое место рыбалки."
+      },
       "locations": [
         {
           "en": "Kastleton",
@@ -384,7 +585,7 @@ window.FISHING_DATA = {
       "id": "fish-14",
       "name": {
         "en": "Amberjack",
-        "ru": "Сериола"
+        "ru": "Коронада"
       },
       "level": 11,
       "waterType": {
@@ -392,6 +593,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/amberjack.png",
+      "note": null,
       "locations": [
         {
           "en": "Kastleton",
@@ -419,7 +621,7 @@ window.FISHING_DATA = {
       "id": "fish-15",
       "name": {
         "en": "Pajama Cardinalfish",
-        "ru": "Пижамная рыба-кардинал"
+        "ru": "Чёрнополосный апогон"
       },
       "level": 11,
       "waterType": {
@@ -427,6 +629,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/pajama-cardinalfish.png",
+      "note": null,
       "locations": [
         {
           "en": "Syleus's Abyss Entrance",
@@ -454,7 +657,7 @@ window.FISHING_DATA = {
       "id": "fish-16",
       "name": {
         "en": "Imp Catalufa",
-        "ru": "Каталуфа беса"
+        "ru": "Карликовая каталуфа"
       },
       "level": 13,
       "waterType": {
@@ -462,6 +665,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/imp-catalufa.png",
+      "note": null,
       "locations": [
         {
           "en": "Purelight Tower",
@@ -497,6 +701,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/flame-fish.png",
+      "note": {
+        "en": "Famous Fishing Spot required",
+        "ru": "Требуется знаменитое место рыбалки."
+      },
       "locations": [
         {
           "en": "Syleus's Abyss 5F",
@@ -520,6 +728,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/barracuda.png",
+      "note": null,
       "locations": [
         {
           "en": "Vienta Village",
@@ -559,6 +768,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/ruby-phantasmal-fish.png",
+      "note": {
+        "en": "Halls of illusion secret room, chance to appear after killing first boss",
+        "ru": "Секретная комната Зала иллюзий, шанс появления после убийства первого босса."
+      },
       "locations": [
         {
           "en": "Hall of Illusion",
@@ -578,6 +791,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/amber-phantasmal-fish.png",
+      "note": {
+        "en": "Halls of illusion secret room, chance to appear after killing first boss",
+        "ru": "Секретная комната Зала иллюзий, шанс появления после убийства первого босса."
+      },
       "locations": [
         {
           "en": "Hall of Illusion",
@@ -597,6 +814,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/topaz-phantasmal-fish.png",
+      "note": {
+        "en": "Halls of illusion secret room, chance to appear after killing first boss",
+        "ru": "Секретная комната Зала иллюзий, шанс появления после убийства первого босса."
+      },
       "locations": [
         {
           "en": "Hall of Illusion",
@@ -616,6 +837,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/emerald-phantasmal-fish.png",
+      "note": {
+        "en": "Halls of illusion secret room, chance to appear after killing first boss",
+        "ru": "Секретная комната Зала иллюзий, шанс появления после убийства первого босса."
+      },
       "locations": [
         {
           "en": "Hall of Illusion",
@@ -635,6 +860,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/crystal-phantasmal-fish.png",
+      "note": {
+        "en": "Halls of illusion secret room, chance to appear after killing first boss",
+        "ru": "Секретная комната Зала иллюзий, шанс появления после убийства первого босса."
+      },
       "locations": [
         {
           "en": "Hall of Illusion",
@@ -654,6 +883,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/sapphire-phantasmal-fish.png",
+      "note": {
+        "en": "Halls of illusion secret room, chance to appear after killing first boss",
+        "ru": "Секретная комната Зала иллюзий, шанс появления после убийства первого босса."
+      },
       "locations": [
         {
           "en": "Hall of Illusion",
@@ -673,6 +906,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/lavender-phantasmal-fish.png",
+      "note": {
+        "en": "Halls of illusion secret room, chance to appear after killing first boss",
+        "ru": "Секретная комната Зала иллюзий, шанс появления после убийства первого босса."
+      },
       "locations": [
         {
           "en": "Hall of Illusion",
@@ -692,6 +929,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/rose-phantasmal-fish.png",
+      "note": {
+        "en": "Halls of illusion secret room, chance to appear after killing first boss",
+        "ru": "Секретная комната Зала иллюзий, шанс появления после убийства первого босса."
+      },
       "locations": [
         {
           "en": "Hall of Illusion",
@@ -703,7 +944,7 @@ window.FISHING_DATA = {
       "id": "fish-27",
       "name": {
         "en": "Lanquis Barracuda",
-        "ru": "Барракуда Ланкис"
+        "ru": "Лангисова щука"
       },
       "level": 15,
       "waterType": {
@@ -711,6 +952,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/lanquis-barracuda.png",
+      "note": null,
       "locations": [
         {
           "en": "Purelight Tower",
@@ -738,7 +980,7 @@ window.FISHING_DATA = {
       "id": "fish-28",
       "name": {
         "en": "Ghost Thornfish",
-        "ru": "Призрачная рыба-шип"
+        "ru": "Призрачный шипорыб"
       },
       "level": 15,
       "waterType": {
@@ -746,6 +988,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/ghost-thornfish.png",
+      "note": {
+        "en": "Famous Fishing Spot required\n(For Ruins location look at the picture on the right)",
+        "ru": "Требуется знаменитое место рыбалки. Для локации в Развалинах смотри подсказку в файле."
+      },
       "locations": [
         {
           "en": "Ruins of Turayne",
@@ -769,6 +1015,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/lava-catfish.png",
+      "note": {
+        "en": "Famous Fishing Spot required",
+        "ru": "Требуется знаменитое место рыбалки."
+      },
       "locations": [
         {
           "en": "Syleus's Abyss 5F",
@@ -784,7 +1034,7 @@ window.FISHING_DATA = {
       "id": "fish-30",
       "name": {
         "en": "Aurora Starfish",
-        "ru": "Морская звезда Аврора"
+        "ru": "Золотая морская звезда"
       },
       "level": 16,
       "waterType": {
@@ -792,6 +1042,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/aurora-starfish.png",
+      "note": null,
       "locations": [
         {
           "en": "Vienta Village",
@@ -823,7 +1074,7 @@ window.FISHING_DATA = {
       "id": "fish-31",
       "name": {
         "en": "Solisium Carp",
-        "ru": "Карп Солизиума"
+        "ru": "Солизиумский карп"
       },
       "level": 17,
       "waterType": {
@@ -831,6 +1082,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/solisium-carp.png",
+      "note": null,
       "locations": [
         {
           "en": "Akidu Lake (needs rain)",
@@ -862,6 +1114,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/striped-mackerel.png",
+      "note": null,
       "locations": [
         {
           "en": "Vienta Village",
@@ -901,6 +1154,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/black-bream.png",
+      "note": null,
       "locations": [
         {
           "en": "Akidu Lake (needs rain)",
@@ -936,6 +1190,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/small-mouthed-rockfish.png",
+      "note": null,
       "locations": [
         {
           "en": "Stonegard Coast",
@@ -971,6 +1226,10 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/squid.png",
+      "note": {
+        "en": "Night",
+        "ru": "Ночь."
+      },
       "locations": [
         {
           "en": "Watcher's Post",
@@ -1006,6 +1265,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/rainbow-ray-finned-fish.png",
+      "note": null,
       "locations": [
         {
           "en": "Watcher's Post",
@@ -1037,6 +1297,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/obsidian-starfish.png",
+      "note": {
+        "en": "Only via Famous Fishing Spot Event",
+        "ru": "Только через событие знаменитого места рыбалки."
+      },
       "locations": [
         {
           "en": "Herba Village",
@@ -1064,6 +1328,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/luderick.png",
+      "note": null,
       "locations": [
         {
           "en": "Stonegard Coast",
@@ -1095,6 +1360,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/bluegill.png",
+      "note": null,
       "locations": [
         {
           "en": "Stoneguard Coast",
@@ -1126,6 +1392,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/lava-eel.png",
+      "note": {
+        "en": "Famous Fishing Spot required",
+        "ru": "Требуется знаменитое место рыбалки."
+      },
       "locations": [
         {
           "en": "Syleus's Abyss 5F",
@@ -1149,6 +1419,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/blacktail-snook.png",
+      "note": null,
       "locations": [
         {
           "en": "Vienta Village",
@@ -1188,6 +1459,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/blue-filefish.png",
+      "note": null,
       "locations": [
         {
           "en": "Watcher's Post",
@@ -1219,6 +1491,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/mackerel.png",
+      "note": null,
       "locations": [
         {
           "en": "Watcher's Post",
@@ -1250,6 +1523,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/lanquis-carp.png",
+      "note": null,
       "locations": [
         {
           "en": "Herba Village",
@@ -1285,6 +1559,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/mullet.png",
+      "note": null,
       "locations": [
         {
           "en": "Herba Village",
@@ -1316,6 +1591,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/swamp-eel.png",
+      "note": {
+        "en": "Only via Famous Fishing Spot Event",
+        "ru": "Только через событие знаменитого места рыбалки."
+      },
       "locations": [
         {
           "en": "Temple of Truth Entrance",
@@ -1343,6 +1622,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/swamp-mudfish.png",
+      "note": {
+        "en": "Only via Famous Fishing Spot Event",
+        "ru": "Только через событие знаменитого места рыбалки."
+      },
       "locations": [
         {
           "en": "Temple of Truth Entrance",
@@ -1370,6 +1653,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/mahi-mahi.png",
+      "note": null,
       "locations": [
         {
           "en": "Watcher's Post",
@@ -1401,6 +1685,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/horse-mackerel.png",
+      "note": null,
       "locations": [
         {
           "en": "Watcher's Post",
@@ -1432,6 +1717,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/ice-smelt.png",
+      "note": {
+        "en": "Only via Famous Fishing Spot Event",
+        "ru": "Только через событие знаменитого места рыбалки."
+      },
       "locations": [
         {
           "en": "Deluzhnoa Temple",
@@ -1451,6 +1740,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/skipjack-tuna.png",
+      "note": null,
       "locations": [
         {
           "en": "Fonos Basin",
@@ -1482,6 +1772,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/mantis-shrimp.png",
+      "note": null,
       "locations": [
         {
           "en": "Fonos Basin",
@@ -1513,6 +1804,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/discus.png",
+      "note": null,
       "locations": [
         {
           "en": "Herba Village",
@@ -1540,6 +1832,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/sunspot-rockfish.png",
+      "note": null,
       "locations": [
         {
           "en": "Herba Village",
@@ -1567,6 +1860,10 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/mushroom-jellyfish.png",
+      "note": {
+        "en": "Only via Famous Fishing Spot Event",
+        "ru": "Только через событие знаменитого места рыбалки."
+      },
       "locations": [
         {
           "en": "Crimson Manor",
@@ -1594,6 +1891,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/striped-crimson-seabream.png",
+      "note": null,
       "locations": [
         {
           "en": "Fonos Basin",
@@ -1621,6 +1919,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/pennant-coralfish.png",
+      "note": null,
       "locations": [
         {
           "en": "Fonos Basin",
@@ -1648,6 +1947,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/heliber-goldfish.png",
+      "note": null,
       "locations": [
         {
           "en": "Swamp of Silence",
@@ -1679,6 +1979,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/red-salmon.png",
+      "note": null,
       "locations": [
         {
           "en": "Temple of Truth B1",
@@ -1710,6 +2011,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/peacock-bass.png",
+      "note": null,
       "locations": [
         {
           "en": "Temple of Truth B1",
@@ -1745,6 +2047,10 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/blacktip-shark.png",
+      "note": {
+        "en": "Rain",
+        "ru": "Дождь."
+      },
       "locations": [
         {
           "en": "Fonos Basin",
@@ -1776,6 +2082,7 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/kahawai.png",
+      "note": null,
       "locations": [
         {
           "en": "Fonos Basin",
@@ -1803,6 +2110,10 @@ window.FISHING_DATA = {
         "ru": "Соленая вода"
       },
       "image": "assets/fish/sea-cockatrice.png",
+      "note": {
+        "en": "Only via Famous Fishing Spot Event",
+        "ru": "Только через событие знаменитого места рыбалки."
+      },
       "locations": [
         {
           "en": "Saurodoma Island",
@@ -1830,6 +2141,7 @@ window.FISHING_DATA = {
         "ru": "Пресная вода"
       },
       "image": "assets/fish/lanquis-bass.png",
+      "note": null,
       "locations": [
         {
           "en": "Temple of Truth B1",
